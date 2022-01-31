@@ -61,8 +61,8 @@ if(argumentos[0] == '--data'){
 			}
 
 			webhook.send(data['mensagem'], {
-				avatarURL: bot['avatar_url'],
-				username: bot['username'],
+				avatarURL: data['avatar_url'] || bot['avatar_url'],
+				username: data['username'] || bot['username'],
 				files,
 				embeds: data['embeds']
 			})
